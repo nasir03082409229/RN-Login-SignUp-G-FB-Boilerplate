@@ -8,10 +8,12 @@
   },
   "dependencies": {
     "firebase": "^4.10.1",
+    "i": "^0.3.6",
     "native-base": "^2.3.9",
+    "npm": "^6.4.0",
     "react": "16.3.0-alpha.1",
     "react-native": "0.54.0",
-    "react-navigation": "^1.4.0",
+    "react-navigation": "^2.12.1",
     "react-redux": "^5.0.7",
     "redux": "^3.7.2",
     "redux-observable": "^0.18.0",
