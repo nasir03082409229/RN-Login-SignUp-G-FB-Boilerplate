@@ -6,19 +6,7 @@ import AuthAction from "../actions/authAction";
 import * as firebase from 'firebase';
 // Initialize Firebase
 var config = {
-    // apiKey: "AIzaSyDqPpxlIGjEikoqzvZqB7_-10158KdfxOs",
-    // authDomain: "reactreduxtodoappfirebase.firebaseapp.com",
-    // databaseURL: "https://reactreduxtodoappfirebase.firebaseio.com",
-    // projectId: "reactreduxtodoappfirebase",
-    // storageBucket: "",
-    // messagingSenderId: "866095779438"
-    // ------------------
-    apiKey: "AIzaSyB1gw1eULCI51zbkcMTA_Hkp6GG3iP_hGs",
-    authDomain: "helios-16b9e.firebaseapp.com",
-    databaseURL: "https://helios-16b9e.firebaseio.com",
-    projectId: "helios-16b9e",
-    storageBucket: "helios-16b9e.appspot.com",
-    messagingSenderId: "39257996651"
+    
 
 };
 firebase.initializeApp(config);
