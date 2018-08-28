@@ -32,7 +32,9 @@ class Login extends Component {
     loginFunc = () => this.props.login({ email: this.state.email, password: this.state.password })
     componentWillReceiveProps = (nextProps) => {
         // alert(JSON.stringify(nextProps))
-        this.props.navigation.navigate('App')
+        if(nextProps.isLogin === true){
+            this.props.navigation.navigate('App')
+        }
     }
 
     render() {

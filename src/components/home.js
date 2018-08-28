@@ -10,7 +10,7 @@ class Home extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text style={{ fontSize : ''}}>Login SuccessFully </Text>
+                <Text style={{ fontSize : 20}}>Login SuccessFully </Text>
                 <Text>Welcome To Home Component </Text>
                 <Button title="logout" onPress={() => {
                     firebase.auth().signOut()

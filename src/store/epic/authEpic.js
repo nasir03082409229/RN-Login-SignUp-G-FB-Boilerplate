@@ -44,15 +44,16 @@ class AuthEpic {
                             return { type: AuthAction.CREATE_USER_SUCCESSFULLY }
 
                         }).catch((err) => {
-                            console.log(err)
-                            ref.push(err.message)
+                            // console.log(err)
                             alert(err.message)
+                            return { type: null };
+                            
 
                         })
                 )
-                    .map((x) => {
-                        return userCreated ? AuthAction.createUserSuccessfully('Naisr') : { type: null }
-                    })
+                    // .map((x) => {
+                    //     return userCreated ? AuthAction.createUserSuccessfully('Naisr') : { type: null }
+                    // })
             })
     }
 
