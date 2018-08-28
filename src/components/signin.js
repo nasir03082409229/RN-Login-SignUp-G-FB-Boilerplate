@@ -19,6 +19,11 @@ class SignIn extends Component {
             password: ''
         }
     }
+
+    componentWillReceiveProps(nextProps) {
+        alert(JSON.stringify(nextProps))
+    }
+
     loginFunc = () => this.props.login({ email: this.state.email, password: this.state.password })
     render() {
         const { email, password } = this.state;
@@ -48,6 +53,11 @@ let mapDispatchToProps = (dispatch) => {
     return {
         login: (data) => { dispatch(AuthAction.loginUser(data)) },
         creataUser: (data) => { dispatch(AuthAction.createUser(data)) },
+    }
+}
+let mapStateToProps = (State) => {
+    return {
+        isLogin: state.AuthReducer.isLogin
     }
 }
 export default connect(null, mapDispatchToProps)(SignIn)
