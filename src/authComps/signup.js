@@ -15,7 +15,6 @@ import {
 import AuthAction from "../store/actions/authAction";
 import { connect } from "react-redux";
 import Icon from "react-native-vector-icons/MaterialIcons";
-
 class SignUp extends Component {
   static navigationOptions = {
     header: null
@@ -40,7 +39,7 @@ class SignUp extends Component {
       email: this.state.email,
       password: this.state.password
     });
-
+  
   render() {
     return (
       <ScrollView>
@@ -106,26 +105,7 @@ class SignUp extends Component {
             <Text style={styles.signUpText}>Sign up</Text>
           </TouchableHighlight>
 
-          <View
-            style={{
-              flexDirection: "row",
-              justifyContent: "center",
-              alignItems: "center"
-            }}
-          >
-            <TouchableOpacity style={{ marginHorizontal: -15 }}>
-              <Image
-                style={styles.icon}
-                source={require("../images/facebook.png")}
-              />
-            </TouchableOpacity>
-            <TouchableOpacity style={{ marginHorizontal: -15 }}>
-              <Image
-                style={styles.icon}
-                source={require("../images/Google+.png")}
-              />
-            </TouchableOpacity>
-          </View>
+    
         </View>
         <View
           style={{

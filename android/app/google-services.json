@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "39257996651",
+    "firebase_url": "https://helios-16b9e.firebaseio.com",
+    "project_id": "helios-16b9e",
+    "storage_bucket": "helios-16b9e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:39257996651:android:3323e8107937f9a1",
+        "android_client_info": {
+          "package_name": "com.loginsignupboilerplate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "39257996651-d8s4es5bqgfk222jc6skiqn3ut4jsnt0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFFIA_ts4iiblyXqXW7oYff5lZ2zsA66g"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -148,6 +148,11 @@ android {
 }
 
 dependencies {
+  compile(project(":react-native-google-signin")){
+        exclude group: "com.google.android.gms" // very important
+    }
+    compile 'com.google.android.gms:play-services-auth:15.0.0' // should be at least 15.0.0 to work with the most recent APIs
+
     compile fileTree(dir: "libs", include: ["*.jar"])
     compile "com.android.support:appcompat-v7:23.0.1"
     compile "com.facebook.react:react-native:+"  // From node_modules
@@ -160,3 +165,4 @@ task copyDownloadableDepsToLibs(type: Copy) {
     from configurations.compile
     into 'libs'
 }
+apply plugin: 'com.google.gms.google-services' // <--- this should be the last line
