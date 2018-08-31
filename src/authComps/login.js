@@ -129,7 +129,7 @@ class Login extends Component {
         >
           <TouchableOpacity style={{  }}>
             <Image
-              style={{height: 50,width: 50,}}
+              style={{height: 60,width: 60,marginHorizontal: 20}}
               source={require("../images/facebook.png")}
             />
           </TouchableOpacity>
@@ -138,7 +138,7 @@ class Login extends Component {
             style={{   }}
           >
             <Image
-              style={{height: 50,width: 50, marginHorizontal: 20}}
+              style={{height: 60,width: 60, marginHorizontal: 20}}
               source={require("../images/Google+.png")}
             />
           </TouchableOpacity>
