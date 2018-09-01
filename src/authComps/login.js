@@ -8,12 +8,13 @@ import {
   TouchableHighlight,
   Image,
   Alert,
-  Scrollvew , TouchableOpacity
+  Scrollvew,
+  TouchableOpacity
 } from "react-native";
 import { connect } from "react-redux";
 import AuthAction from "../store/actions/authAction";
 import Icon from "react-native-vector-icons/MaterialIcons";
-
+import FBSDK, { LoginManager, AccessToken } from "react-native-fbsdk";
 import { GoogleSignin, GoogleSigninButton } from "react-native-google-signin";
 import * as firebase from "firebase";
 class Login extends Component {
@@ -31,21 +32,66 @@ class Login extends Component {
     GoogleSignin.configure({}).then(data => {
       GoogleSignin.signIn()
         .then(accessTokenData => {
+          // alert(JSON.stringify(accessTokenData))
+          
           console.log(accessTokenData, "signin++++++++++++");
           const credential = firebase.auth.GoogleAuthProvider.credential(
             accessTokenData
           );
+          // alert(JSON.stringify(credential))
+          
           firebase
             .auth()
             .signInWithCredential(credential)
             .then(function(user) {
+              // alert(JSON.stringify(user))
+              
               console.log("Sign In Success", user);
             });
         })
         .catch(err => {
+          alert(JSON.stringify(err))
+          
           console.log("WRONG SIGNIN----------", err);
         });
     });
+  };
+  loginWithFacebook = () => {
+    LoginManager.logInWithReadPermissions(["public_profile", "email"]).then(
+      function(result) {
+        if (result.isCancelled) {
+          // alert("Login cancelled");
+        } else {
+          AccessToken.getCurrentAccessToken().then(
+            accessTokenData => {
+              console.log(accessTokenData, "accessTokenData");
+              // alert(JSON.stringify(accessTokenData))
+              const credential = firebase.auth.FacebookAuthProvider.credential(
+                accessTokenData.accessToken
+              );
+              console.log(credential);
+              // alert(JSON.stringify(credential))              
+              firebase
+                .auth()
+                .signInWithCredential(credential)
+                .then((user)=> {
+                  console.log("Sign In Success", user);
+                  // alert(JSON.stringify(user))
+                }).catch((err)=>{ 
+                  alert(JSON.stringify(err))
+                });
+            },
+            error => {
+              // alert(JSON.stringify(error))              
+              console.log(error, "some error occurred");
+            }
+          );
+        }
+      },
+      (error)=> {
+        alert("Login fail with error: " + error);
+      }
+    );
   };
   onClickListener = viewId => {
     this.props.navigation.navigate("SignUp");
@@ -127,18 +173,15 @@ class Login extends Component {
             alignItems: "center"
           }}
         >
-          <TouchableOpacity style={{  }}>
+          <TouchableOpacity onPress={this.loginWithFacebook} style={{}}>
             <Image
-              style={{height: 60,width: 60,marginHorizontal: 20}}
+              style={{ height: 50, width: 50, marginHorizontal: 20 }}
               source={require("../images/facebook.png")}
             />
           </TouchableOpacity>
-          <TouchableOpacity
-            onPress={this.loginWithGoogle}
-            style={{   }}
-          >
+          <TouchableOpacity onPress={this.loginWithGoogle} style={{}}>
             <Image
-              style={{height: 60,width: 60, marginHorizontal: 20}}
+              style={{ height: 50, width: 50, marginHorizontal: 20 }}
               source={require("../images/Google+.png")}
             />
           </TouchableOpacity>
