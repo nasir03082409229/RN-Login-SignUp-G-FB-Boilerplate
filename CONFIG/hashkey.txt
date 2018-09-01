@@ -1,0 +1,11 @@
+keytool -exportcert -alias my-key-alias -keystore 
+"C:\Users\Ameen Alam\.android\debug.keystore" | 
+"C:\OpenSSL\bin\openssl.exe" sha1 -binary | 
+"C:\OpenSSL\bin\openssl.exe" base64
+
+
+C:\Program Files\Java\jre-9.0.4\bin\keytool.exe
+C:\OpenSSL\bin\openssl.exe
+C:\Users\Ameen Alam\.android\debug.keystore
+
+
