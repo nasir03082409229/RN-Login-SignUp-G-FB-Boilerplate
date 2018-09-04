@@ -156,16 +156,16 @@ class Login extends Component {
           <Text style={styles.loginText}>Login</Text>
         </TouchableHighlight>
 
-        {/* <TouchableHighlight style={styles.buttonContainer} onPress={() => this.onClickListener('restore_password')}>
+        <TouchableOpacity style={[styles.buttonContainer, { marginBottom : 0}]} onPress={() => this.props.navigation.navigate('ForGetScreen')}>
                     <Text>Forgot your password?</Text>
-                </TouchableHighlight> */}
+                </TouchableOpacity>
 
-        <TouchableHighlight
+        <TouchableOpacity
           style={styles.buttonContainer}
           onPress={() => this.onClickListener("register")}
         >
           <Text>Create an Account Here !</Text>
-        </TouchableHighlight>
+        </TouchableOpacity>
         <View
           style={{
             flexDirection: "row",

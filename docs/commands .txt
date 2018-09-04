@@ -1,0 +1,39 @@
+keytool -exportcert -alias my-key-alias -keystore "C:\Users\Ameen Alam\.android\debug.keystore" | "C:\OpenSSL\bin\openssl.exe" sha1 -binary | "C:\OpenSSL\bin\openssl.exe" base64
+
+keytool -exportcert -alias my-key-alias -keystore "C:\Users\Ameen Alam\.android\debug.keystore" | "C:\OpenSSL\bin\openssl.exe" sha1 -binary | "C:\OpenSSL\bin\openssl.exe" base64
+
+C:\Program Files\Java\jre-9.0.4\bin\keytool.exe
+C:\OpenSSL\bin\openssl.exe
+C:\Users\Ameen Alam\.android\debug.keystore
+
+
+keytool -exportcert -list -v \-alias my-key-alias -keystore "C:\Users\Ameen Alam\.android\debug.keystore"
+
+
+keytool -list -v -keystore "C:\Users\Ameen Alam\.android\debug.keystore" -alias my-key-alias
+
+keytool -exportcert -list -v \-alias my-key-alias -keystore "F:\Nasir\Sir Haider\HELIOS\loginSignUpBoilerPlate\android\app\my-release-key.keystore"
+
+keytool -exportcert -alias androiddebugkey -keystore "C:\Users\Ameen Alam\.android\debug.keystore" | C:\OpenSSL\bin\openssl.exe sha1 -binary | C:\OpenSSL\bin\openssl.exe
+base64
+
+keytool -exportcert -alias my-key-alias -keystore "C:\Users\Ameen Alam\.android\debug.keystore" | "C:\OpenSSL\bin\openssl.exe" sha1 -binary |"C:\OpenSSL\bin\openssl.exe" base64
+
+
+      
+keytool -exportcert -alias my-key-alias -keystore "F:\Nasir\Sir Haider\HELIOS\loginSignUpBoilerPlate\android\app\my-release-key.keystore" | "C:\OpenSSL\bin\openssl.exe" sha1 -binary | "C:\OpenSSL\bin\openssl.exe" base64
+
+------
+keytool -exportcert -alias  my-key-alias -keystore "C:\Users\Ameen Alam\.android\debug.keystore" | "C:\OpenSSL\bin\openssl.exe" sha1 -binary | "C:\OpenSSL\bin\openssl.exe" base64
+
+      
+keytool -exportcert -alias YOUR_RELEASE_KEY_ALIAS -keystore "F:\Nasir\Sir Haider\HELIOS\loginSignUpBoilerPlate\android\app\my-release-key.keystore" | "C:\OpenSSL\bin\openssl.exe" sha1 -binary | "C:\OpenSSL\bin\openssl.exe" base64
+
+
+
+      
+keytool -exportcert -alias my-key-alias -keystore my-release-key.keystore | "C:\OpenSSL\bin\openssl.exe" sha1 -binary | "C:\OpenSSL\bin\openssl.exe" base64
+
+
+
+keytool -exportcert -alias my-key-alias -keystore my-release-key.keystore | C:\OpenSSL\bin\openssl.exe sha1 -binary | C:\OpenSSL\bin\openssl.exe base64

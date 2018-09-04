@@ -1,40 +1,49 @@
-
-import React, { Component } from 'react';
-import { View, Text } from 'react-native';
-import { createSwitchNavigator, createStackNavigator, StackNavigator } from 'react-navigation';
+import React, { Component } from "react";
+import { View, Text } from "react-native";
+import {
+  createSwitchNavigator,
+  createStackNavigator,
+  StackNavigator
+} from "react-navigation";
 // import SignUp from './src/components/signup';
 // import SignIn from './src/components/signin';
-import Home from './src/components/home';
-import AuthLoading from './authloading';
-import Login from './src/authComps/login'
-import SignUp from './src/authComps/signup'
+import Home from "./src/components/home";
+import AuthLoading from "./authloading";
+import Login from "./src/authComps/login";
+import ForGetScreen from "./src/authComps/forgetscreen";
+import SignUp from "./src/authComps/signup";
 // Implementation of HomeScreen, OtherScreen, SignInScreen, AuthLoadingScreen
 // goes here.
 
-const AppStack = createStackNavigator({
-  Home: Home
-
-}, {
-    initialRouteName: 'Home',
-  });
-const AuthStack = createStackNavigator({
-  SignIn: Login,
-  SignUp: SignUp,
-  // SignIn: SignIn,
-  // SignUp: SignUp,
-}, {
-    initialRouteName: 'SignIn',
-  });
-
+const AppStack = createStackNavigator(
+  {
+    Home: Home
+  },
+  {
+    initialRouteName: "Home"
+  }
+);
+const AuthStack = createStackNavigator(
+  {
+    SignIn: Login,
+    SignUp: SignUp,
+    ForGetScreen: ForGetScreen
+    // SignIn: SignIn,
+    // SignUp: SignUp,
+  },
+  {
+    initialRouteName: "SignIn"
+  }
+);
 
 const MainNavigator = createSwitchNavigator(
   {
     AuthLoading: AuthLoading,
     App: AppStack,
-    Auth: AuthStack,
+    Auth: AuthStack
   },
   {
-    initialRouteName: 'AuthLoading',
+    initialRouteName: "AuthLoading",
     header: null
   }
 );
@@ -42,14 +51,11 @@ const MainNavigator = createSwitchNavigator(
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-    };
+    this.state = {};
   }
 
   render() {
-    return (
-      <MainNavigator />
-    );
+    return <MainNavigator />;
   }
 }
 

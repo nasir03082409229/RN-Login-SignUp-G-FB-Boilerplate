@@ -8,6 +8,58 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:39257996651:android:bc2afe9ca62d31d5",
+        "android_client_info": {
+          "package_name": "com.helios"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "39257996651-3i1hg2drpcm0o710fjg9ik7f35201v92.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.helios",
+            "certificate_hash": "4e708bd57c980dde299ba6bbf007c0ea0a802e30"
+          }
+        },
+        {
+          "client_id": "39257996651-c3vtjlr4qj8en1galk33s7d24butbabj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.helios",
+            "certificate_hash": "0b58bff7fd833f519d49cda26c9f45995a687a2e"
+          }
+        },
+        {
+          "client_id": "39257996651-d8s4es5bqgfk222jc6skiqn3ut4jsnt0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFFIA_ts4iiblyXqXW7oYff5lZ2zsA66g"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "39257996651-d8s4es5bqgfk222jc6skiqn3ut4jsnt0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:39257996651:android:3323e8107937f9a1",
         "android_client_info": {
           "package_name": "com.loginsignupboilerplate"
@@ -20,6 +72,22 @@
           "android_info": {
             "package_name": "com.loginsignupboilerplate",
             "certificate_hash": "72491f7a9c4ae64aff4ed95ae926fa49db2c5be6"
+          }
+        },
+        {
+          "client_id": "39257996651-il3ttv24k466ro72sp10kiqg1cb3su7r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.loginsignupboilerplate",
+            "certificate_hash": "0b58bff7fd833f519d49cda26c9f45995a687a2e"
+          }
+        },
+        {
+          "client_id": "39257996651-allnl07eao1g8s69o42efcjig5f8ki1m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.loginsignupboilerplate",
+            "certificate_hash": "ab87d71223ce948ce6b18f9c1eaa049016a658fc"
           }
         },
         {
